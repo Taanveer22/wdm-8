@@ -13,6 +13,7 @@ const MyRouter = createBrowserRouter([
       {
         path: "/",
         element: <HomePage></HomePage>,
+        loader: () => fetch("/dataType.json"),
       },
       {
         path: "/statisticspage",

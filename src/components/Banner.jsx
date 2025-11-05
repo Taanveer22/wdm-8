@@ -2,7 +2,7 @@ import bannerPhoto from "../assets/banner.jpg";
 const Banner = () => {
   return (
     <div className="relative min-h-screen mb-12 overflow-hidden">
-      <div className="hero bg-purple-500 text-white rounded-xl pb-32">
+      <div className="hero bg-purple-500 text-white rounded-xl pb-0 lg:pb-32">
         <div className="hero-content text-center">
           <div className="max-w-5xl">
             <h1 className="text-5xl font-bold">
@@ -20,10 +20,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="hidden sm:block max-w-5xl absolute top-60 p-5">
+      <div className="hidden lg:flex justify-center items-center max-w-5xl  absolute top-60 p-5">
         <img
           src={bannerPhoto}
-          className="object-cover w-1/2 mx-auto rounded-lg border-2 border-white p-4"
+          className="object-cover w-1/2 rounded-lg border-2 border-white p-4"
         />
       </div>
     </div>

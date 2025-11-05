@@ -1,0 +1,310 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "https://example.com/phone1.jpg",
+    "category": "Phones",
+    "price": 1299,
+    "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_image": "https://example.com/phone2.jpg",
+    "category": "Phones",
+    "price": 1199,
+    "description": "Redefine performance with the Galaxy S24 Ultra and its advanced AI camera system.",
+    "specification": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 3 processor",
+      "200MP quad-camera system",
+      "S Pen support",
+      "5000mAh battery with 45W fast charging"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Google Pixel 8 Pro",
+    "product_image": "https://example.com/phone3.jpg",
+    "category": "Phones",
+    "price": 999,
+    "description": "Capture stunning photos with Pixel’s advanced AI camera and enjoy smooth performance.",
+    "specification": [
+      "6.7-inch LTPO OLED display",
+      "Google Tensor G3 chip",
+      "Triple rear camera with 50MP main sensor",
+      "Titan M2 security chip",
+      "Wireless charging"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P004",
+    "product_title": "OnePlus 12 Pro",
+    "product_image": "https://example.com/phone4.jpg",
+    "category": "Phones",
+    "price": 899,
+    "description": "Fast and smooth performance with the OnePlus 12 Pro and its sleek design.",
+    "specification": [
+      "6.7-inch Fluid AMOLED display",
+      "Snapdragon 8 Gen 3 processor",
+      "Hasselblad triple camera setup",
+      "100W SuperVOOC charging",
+      "5000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Xiaomi 14 Ultra",
+    "product_image": "https://example.com/phone5.jpg",
+    "category": "Phones",
+    "price": 899,
+    "description": "Xiaomi 14 Ultra offers pro-level photography and unbeatable performance.",
+    "specification": [
+      "6.73-inch AMOLED display",
+      "Snapdragon 8 Gen 3 processor",
+      "Leica quad-camera system",
+      "120W HyperCharge support",
+      "Up to 1TB storage"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Nothing Phone (2)",
+    "product_image": "https://example.com/phone6.jpg",
+    "category": "Phones",
+    "price": 749,
+    "description": "A minimalistic design meets powerful performance in the Nothing Phone (2).",
+    "specification": [
+      "6.7-inch OLED display",
+      "Snapdragon 8+ Gen 1 processor",
+      "Dual 50MP cameras",
+      "Glyph Interface lighting",
+      "45W fast charging"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+
+  {
+    "product_id": "P011",
+    "product_title": "MacBook Air M2",
+    "product_image": "https://example.com/laptop1.jpg",
+    "category": "Laptops",
+    "price": 1499,
+    "description": "Experience the ultimate MacBook performance with the Apple M2 chip.",
+    "specification": [
+      "Apple M2 chip",
+      "13.6-inch Liquid Retina display",
+      "512GB SSD",
+      "16GB unified memory",
+      "2 Thunderbolt 4 ports"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P012",
+    "product_title": "Dell XPS 15",
+    "product_image": "https://example.com/laptop2.jpg",
+    "category": "Laptops",
+    "price": 1699,
+    "description": "Powerful and elegant laptop designed for professionals and creators.",
+    "specification": [
+      "Intel Core i7 13th Gen",
+      "15.6-inch InfinityEdge OLED display",
+      "1TB SSD",
+      "32GB RAM",
+      "NVIDIA RTX 4060 GPU"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P013",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://example.com/laptop3.jpg",
+    "category": "Laptops",
+    "price": 1399,
+    "description": "Versatile 2-in-1 laptop with a premium design and long-lasting battery.",
+    "specification": [
+      "Intel Core i7 13th Gen",
+      "13.5-inch OLED touchscreen",
+      "1TB SSD",
+      "16GB RAM",
+      "Convertible 360° hinge"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P014",
+    "product_title": "Lenovo ThinkPad X1 Carbon Gen 11",
+    "product_image": "https://example.com/laptop4.jpg",
+    "category": "Laptops",
+    "price": 1799,
+    "description": "Durable business laptop with powerful specs and exceptional battery life.",
+    "specification": [
+      "Intel Core i7 vPro",
+      "14-inch 2.8K OLED display",
+      "1TB SSD",
+      "32GB RAM",
+      "Fingerprint reader"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P015",
+    "product_title": "ASUS ROG Zephyrus G14",
+    "product_image": "https://example.com/laptop5.jpg",
+    "category": "Laptops",
+    "price": 1599,
+    "description": "Compact gaming powerhouse with high refresh rate and next-gen performance.",
+    "specification": [
+      "AMD Ryzen 9 7940HS",
+      "14-inch QHD+ 165Hz display",
+      "1TB SSD",
+      "32GB RAM",
+      "NVIDIA RTX 4070 GPU"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P016",
+    "product_title": "Acer Swift X 16",
+    "product_image": "https://example.com/laptop6.jpg",
+    "category": "Laptops",
+    "price": 1199,
+    "description": "Lightweight creative laptop with exceptional display and fast performance.",
+    "specification": [
+      "AMD Ryzen 7 7840U",
+      "16-inch OLED display",
+      "1TB SSD",
+      "16GB RAM",
+      "NVIDIA RTX 4050 GPU"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+
+  {
+    "product_id": "P111",
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://example.com/watch1.jpg",
+    "category": "Watches",
+    "price": 1299,
+    "description": "Experience the ultimate smartwatch with the Apple Watch Series 9.",
+    "specification": [
+      "S9 chip",
+      "2,000 nits peak brightness",
+      "45mm case options",
+      "Ion-X front glass",
+      "Electrical heart sensor"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P112",
+    "product_title": "Samsung Galaxy Watch 6 Classic",
+    "product_image": "https://example.com/watch2.jpg",
+    "category": "Watches",
+    "price": 449,
+    "description": "Elegant design and advanced health tracking with Galaxy Watch 6 Classic.",
+    "specification": [
+      "Exynos W930 chip",
+      "Super AMOLED display",
+      "47mm rotating bezel",
+      "Sleep tracking and ECG",
+      "IP68 water resistance"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P113",
+    "product_title": "Google Pixel Watch 2",
+    "product_image": "https://example.com/watch3.jpg",
+    "category": "Watches",
+    "price": 399,
+    "description": "Seamlessly integrates with Android and Fitbit for complete fitness tracking.",
+    "specification": [
+      "Qualcomm Snapdragon W5 Gen 1",
+      "1.2-inch AMOLED display",
+      "Heart rate and SpO2 monitor",
+      "Fitbit integration",
+      "Fast charging support"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P114",
+    "product_title": "Garmin Fenix 7 Pro",
+    "product_image": "https://example.com/watch4.jpg",
+    "category": "Watches",
+    "price": 799,
+    "description": "Premium outdoor smartwatch with GPS and solar charging support.",
+    "specification": [
+      "Power Sapphire lens",
+      "Solar charging technology",
+      "Multi-band GNSS GPS",
+      "VO2 max tracking",
+      "100m water resistance"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P115",
+    "product_title": "Fitbit Sense 2",
+    "product_image": "https://example.com/watch5.jpg",
+    "category": "Watches",
+    "price": 299,
+    "description": "Smart health watch with stress management and heart monitoring.",
+    "specification": [
+      "EDA sensor for stress",
+      "Heart rate and SpO2 sensor",
+      "6+ day battery life",
+      "Google Maps and Wallet",
+      "Sleep tracking"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P116",
+    "product_title": "Amazfit GTR 4",
+    "product_image": "https://example.com/watch6.jpg",
+    "category": "Watches",
+    "price": 249,
+    "description": "Stylish and efficient smartwatch with GPS and fitness tracking.",
+    "specification": [
+      "Dual-band GPS",
+      "1.43-inch AMOLED display",
+      "Bluetooth calling",
+      "150+ sports modes",
+      "5 ATM water resistance"
+    ],
+    "availability": true,
+    "rating": 4.4
+  }
+]
