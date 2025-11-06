@@ -4,6 +4,8 @@ import MyLayout from "../layouts/MyLayout";
 import HomePage from "../pages/HomePage";
 import StatisticsPage from "../pages/StatisticsPage";
 import DashboardPage from "../pages/DashboardPage";
+import AllCards from "../components/AllCards";
+
 const MyRouter = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +16,18 @@ const MyRouter = createBrowserRouter([
         path: "/",
         element: <HomePage></HomePage>,
         loader: () => fetch("/dataType.json"),
+        children: [
+          {
+            path: "/",
+            element: <AllCards></AllCards>,
+            loader: () => fetch("/data.json"),
+          },
+          {
+            path: "/allcards/:categoryType",
+            element: <AllCards></AllCards>,
+            loader: () => fetch("/data.json"),
+          },
+        ],
       },
       {
         path: "/statisticspage",

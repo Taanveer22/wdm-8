@@ -1,16 +1,21 @@
 [
   {
     "id": 1,
+    "category": "All Prouducts",
+    "slug": "allproducts"
+  },
+  {
+    "id": 2,
     "category": "Phones",
     "slug": "phones"
   },
   {
-    "id": 2,
+    "id": 3,
     "category": "Laptops",
     "slug": "laptops"
   },
   {
-    "id": 3,
+    "id": 4,
     "category": "Watches",
     "slug": "watches"
   }
