@@ -1,11 +1,11 @@
 import bannerPhoto from "../assets/banner.jpg";
 const Banner = () => {
   return (
-    <div className="relative min-h-screen mb-12 overflow-hidden">
-      <div className="hero bg-purple-500 text-white rounded-xl pb-0 lg:pb-32">
+    <div className="min-h-screen">
+      <div className="hero bg-purple-500 text-white rounded-xl pb-10 sm:pb-16 lg:pb-32">
         <div className="hero-content text-center">
           <div className="max-w-5xl">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-3xl sm:text-5xl font-bold">
               Upgrade Your Tech Accessorize with <br /> Gadget Heaven
               Accessories
             </h1>
@@ -20,10 +20,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:flex justify-center items-center max-w-5xl  absolute top-60 p-5">
+      <div className="flex justify-center items-center -mt-10 sm:-mt-16 lg:-mt-32 ">
         <img
           src={bannerPhoto}
-          className="object-cover w-1/2 rounded-lg border-2 border-white p-4"
+          className="object-cover w-full sm:w-5/6 lg:w-2/3 rounded-lg border-2 border-white"
         />
       </div>
     </div>

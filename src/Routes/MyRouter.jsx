@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import StatisticsPage from "../pages/StatisticsPage";
 import DashboardPage from "../pages/DashboardPage";
 import AllCards from "../components/AllCards";
+import CardDetail from "../components/CardDetail";
 
 const MyRouter = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const MyRouter = createBrowserRouter([
             loader: () => fetch("/data.json"),
           },
         ],
+      },
+      {
+        path: "/cardDetail/:id",
+        element: <CardDetail></CardDetail>,
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/statisticspage",

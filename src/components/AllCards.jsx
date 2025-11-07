@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 const AllCards = () => {
   const { categoryType } = useParams();
-  console.log(categoryType);
+  // console.log(categoryType);
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
   const [products, setProducts] = useState([]);
   useEffect(() => {
     if (
