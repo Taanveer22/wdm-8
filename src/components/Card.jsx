@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
-const Card = ({ cardItem }) => {
+import { Link, useLocation } from "react-router-dom";
+import { TiDelete } from "react-icons/ti";
+
+const Card = ({ cardItem, showDeleteIcon = false, handleRemoveFromCart }) => {
+  const { pathname } = useLocation();
+  console.log(pathname);
+
   const { price, product_image, product_title, product_id } = cardItem;
   return (
-    <div className="card bg-base-100 shadow-sm">
+    <div className="card bg-base-100 shadow-sm relative">
       <figure className="px-5 pt-5 ">
-        <img src={product_image} className="rounded-md w-full h-44" />
+        <img src={product_image} className="rounded-md w-11/12 h-44" />
       </figure>
       <div className="card-body items-start text-center">
         <h2 className="card-title">{product_title}</h2>
@@ -17,6 +22,14 @@ const Card = ({ cardItem }) => {
           </Link>
         </div>
       </div>
+      {showDeleteIcon && (
+        <div
+          onClick={() => handleRemoveFromCart(product_id)}
+          className="absolute top-40 right-3 text-red-600"
+        >
+          <TiDelete size={40}></TiDelete>
+        </div>
+      )}
     </div>
   );
 };

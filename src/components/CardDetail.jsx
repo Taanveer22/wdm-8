@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { setCartToLocalStorage } from "../utilities/cart";
+import { setCartToLocalStorage } from "../utilities/lsCart";
 
 const CardDetail = () => {
   const data = useLoaderData();

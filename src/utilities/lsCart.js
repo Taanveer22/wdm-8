@@ -23,7 +23,19 @@ const setCartToLocalStorage = (product) => {
 };
 
 // delete from local storage
+const deleteCartFromLocalStorage = (id) => {
+  let cart = getCartFromLocalStorage();
+  const remainingCart = cart.filter((item) => item.product_id !== id);
+  if (remainingCart) {
+    localStorage.setItem("cart", JSON.stringify(remainingCart));
+    alert("deleted cart");
+  }
+};
 
 // export all functions
 
-export { getCartFromLocalStorage, setCartToLocalStorage };
+export {
+  getCartFromLocalStorage,
+  setCartToLocalStorage,
+  deleteCartFromLocalStorage,
+};

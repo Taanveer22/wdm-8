@@ -2,16 +2,25 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FaSortAmountDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { getCartFromLocalStorage } from "../utilities/cart";
+import {
+  deleteCartFromLocalStorage,
+  getCartFromLocalStorage,
+} from "../utilities/lsCart";
 import Card from "../components/Card";
 
 const DashboardPage = () => {
   const [cartList, setCartList] = useState([]);
+  // const [wishList, setWishList] = useState([]);
   useEffect(() => {
     const localStorageCart = getCartFromLocalStorage();
     setCartList(localStorageCart);
   }, []);
-  console.log(cartList);
+  // console.log(cartList);
+  const handleRemoveFromCart = (id) => {
+    deleteCartFromLocalStorage(id);
+    const localStorageCart = getCartFromLocalStorage();
+    setCartList(localStorageCart);
+  };
   return (
     <div>
       <div className="text-center bg-purple-500 py-8 text-white">
@@ -44,12 +53,18 @@ const DashboardPage = () => {
 
           <div className="grid gap-6 grid-cols-1">
             {cartList.map((cardItem) => (
-              <Card cardItem={cardItem} key={cardItem.producta_id}></Card>
+              <Card
+                cardItem={cardItem}
+                key={cardItem.product_id}
+                showDeleteIcon={true}
+                handleRemoveFromCart={handleRemoveFromCart}
+              ></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <h2>Any content 2</h2>
+          {}
         </TabPanel>
       </Tabs>
     </div>
