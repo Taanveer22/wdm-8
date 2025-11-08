@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { setCartToLocalStorage } from "../utilities/cart";
 
 const CardDetail = () => {
   const data = useLoaderData();
@@ -15,7 +16,7 @@ const CardDetail = () => {
     );
     setProduct(foundProduct);
   }, [data, id]);
-  console.log(product);
+  // console.log(product);
   if (!product) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -32,6 +33,10 @@ const CardDetail = () => {
     description,
     availability,
   } = product;
+
+  const handleAddToCartBtn = (product) => {
+    setCartToLocalStorage(product);
+  };
 
   return (
     <>
@@ -62,23 +67,23 @@ const CardDetail = () => {
                 <h1 className="text-2xl lg:text-3xl font-bold">
                   {product_title}
                 </h1>
-                <p>Price : {price}</p>
-                <button className="btn btn-success btn-sm">
+                <p className="text-lg font-bold">Price : {price} $</p>
+                <button className="btn btn-outline btn-success rounded-full">
                   {availability ? "In Stock" : "Out Of Stock"}
                 </button>
-                <p>{description}</p>
-                <h1>Specification :</h1>
+                <p className="opacity-60">{description}</p>
+                <h1 className="text-lg font-bold">Specification :</h1>
                 {/* <ul>
                   {specification &&
                     specification.map((element, index) => (
                       <li key={index}>{element}</li>
                     ))}
                 </ul> */}
-                <p>1. {specification[0]}</p>
-                <p>2. {specification[1]}</p>
-                <p>3. {specification[2]}</p>
-                <p>4. {specification[3]}</p>
-                <h1>Rating</h1>
+                <p className="opacity-60">1. {specification[0]}</p>
+                <p className="opacity-60">2. {specification[1]}</p>
+                <p className="opacity-60">3. {specification[2]}</p>
+                <p className="opacity-60">4. {specification[3]}</p>
+                <h1 className="text-lg font-bold">Rating</h1>
                 <div className="flex gap-5 items-center">
                   <div className="rating">
                     <input
@@ -113,19 +118,22 @@ const CardDetail = () => {
                       aria-label="5 star"
                     />
                   </div>
-                  <p>{rating}</p>
+                  <button className="btn btn-xs rounded-full text-sm font-medium">
+                    {rating}
+                  </button>
                 </div>
 
                 <div className="flex gap-5 items-center">
-                  <button className="flex gap-3 items-center btn btn-primary rounded-full">
-                    <h1 className="">Add To Cart</h1>
-                    <div className="p-3 rounded-full border-2 border-gray-300">
-                      <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                    </div>
+                  <button
+                    onClick={() => handleAddToCartBtn(product)}
+                    className="flex gap-3 items-center bg-purple-500 px-4 py-2 rounded-full text-white"
+                  >
+                    <span className="text-lg font-bold">Add To Cart</span>
+                    <AiOutlineShoppingCart size={30}></AiOutlineShoppingCart>
                   </button>
-                  <div className="p-3 rounded-full border-2 border-gray-300">
-                    <FaRegHeart></FaRegHeart>
-                  </div>
+                  <button className="p-3 rounded-full border-2 border-gray-300">
+                    <FaRegHeart size={20}></FaRegHeart>
+                  </button>
                 </div>
               </div>
             </div>

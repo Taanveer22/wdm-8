@@ -20,10 +20,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center -mt-10 sm:-mt-16 lg:-mt-32 ">
+      <div className="flex justify-center items-center -mt-10 sm:-mt-16 lg:-mt-32">
         <img
           src={bannerPhoto}
-          className="object-cover w-full sm:w-5/6 lg:w-2/3 rounded-lg border-2 border-white"
+          className="object-cover w-full sm:w-5/6 lg:w-2/3 p-5 border-2 border-white rounded-xl"
         />
       </div>
     </div>

@@ -8,7 +8,7 @@ const Card = ({ cardItem }) => {
       </figure>
       <div className="card-body items-start text-center">
         <h2 className="card-title">{product_title}</h2>
-        <p>Price : {price}</p>
+        <p>Price : {price} $</p>
         <div className="card-actions">
           <Link to={`/cardDetail/${product_id}`}>
             <button className="btn btn-outline text-violet-700 rounded-full border-2 border-violet-700">

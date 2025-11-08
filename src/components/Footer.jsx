@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center mb-6">
+      <div className="w-11/12 mx-auto flex flex-col justify-center items-center mb-6">
         <h1 className="text-3xl font-bold">Gadget Heaven</h1>
         <p className="text-base font-medium opacity-60">
           Leading the way in cutting-edge technology and innovation.
