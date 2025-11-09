@@ -2,11 +2,11 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FaSortAmountDown } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import Card from "../components/Card";
 import {
   deleteCartFromLocalStorage,
   getCartFromLocalStorage,
 } from "../utilities/lsCart";
-import Card from "../components/Card";
 import {
   deleteWishListFromLocalStorage,
   getWishListFromLocalStorage,
@@ -15,6 +15,7 @@ import {
 const DashboardPage = () => {
   const [cartList, setCartList] = useState([]);
   const [wishList, setWishList] = useState([]);
+  // const [sortCartList, setSortCartList] = useState([]);
 
   useEffect(() => {
     const localStorageCart = getCartFromLocalStorage();
@@ -36,6 +37,16 @@ const DashboardPage = () => {
     const localStorageWishList = getWishListFromLocalStorage();
     setWishList(localStorageWishList);
   };
+
+  const handleCartListSorting = (type) => {
+    // console.log(type);
+    if (type === "price") {
+      const sortedCartList = [...cartList].sort(
+        (a, b) => Number(b.price) - Number(a.price)
+      );
+      setCartList(sortedCartList);
+    }
+  };
   return (
     <div>
       <div className="text-center bg-purple-500 py-8 text-white">
@@ -56,7 +67,10 @@ const DashboardPage = () => {
             <h1 className="text-2xl font-bold">Cart</h1>
             <div className="flex gap-3 items-center">
               <h1 className="text-2xl font-bold">Total Cost : </h1>
-              <button className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full">
+              <button
+                onClick={() => handleCartListSorting("price")}
+                className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full"
+              >
                 <span>Sort By Price</span>
                 <FaSortAmountDown></FaSortAmountDown>
               </button>
@@ -81,7 +95,7 @@ const DashboardPage = () => {
           <div className="flex justify-between items-center mt-16">
             <h1 className="text-2xl font-bold">Wishlist</h1>
             <button className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full">
-              <span>Sort By Price</span>
+              <span>Sort By Rating</span>
               <FaSortAmountDown></FaSortAmountDown>
             </button>
           </div>
