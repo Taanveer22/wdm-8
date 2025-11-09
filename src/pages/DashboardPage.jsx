@@ -16,6 +16,7 @@ import {
 const DashboardPage = () => {
   const [cartList, setCartList] = useState([]);
   const [wishList, setWishList] = useState([]);
+  const [cost, setCost] = useState(0);
 
   useEffect(() => {
     const localStorageCart = getCartFromLocalStorage();
@@ -26,6 +27,24 @@ const DashboardPage = () => {
   }, []);
   // console.log(cartList);
   // console.log(wishList);
+  useEffect(() => {
+    // if no items total is zero
+    if (cartList.length === 0) {
+      setCost(0);
+      return;
+    }
+    // make variable to store total
+    let total = 0;
+    // Go through each item in the cart one by one
+    for (let i = 0; i < cartList.length; i++) {
+      // Add that item’s price to total
+      total = total + Number(cartList[i].price);
+    }
+    // Update the "cost" state with the final total
+    setCost(total);
+    // This runs whenever the cart changes .. so carList is a dependency
+  }, [cartList]);
+
   const handleRemoveFromCart = (id) => {
     deleteCartFromLocalStorage(id);
     const localStorageCart = getCartFromLocalStorage();
@@ -77,7 +96,7 @@ const DashboardPage = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center mt-16">
             <h1 className="text-2xl font-bold">Cart</h1>
             <div className="flex gap-3 items-center">
-              <h1 className="text-2xl font-bold">Total Cost : </h1>
+              <h1 className="text-2xl font-bold">Total Cost : {cost}</h1>
               <button
                 onClick={() => handleCartListSorting("price")}
                 className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full"

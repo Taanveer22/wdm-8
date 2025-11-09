@@ -43,6 +43,7 @@ const CardDetail = () => {
     setWishListToLocalStorage(product);
   };
 
+
   return (
     <>
       <section className="min-h-screen">
