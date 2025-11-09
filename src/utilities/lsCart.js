@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 // get from local storage
 const getCartFromLocalStorage = () => {
   let cart = [];
@@ -14,11 +16,11 @@ const setCartToLocalStorage = (product) => {
   let cart = getCartFromLocalStorage();
   const isExist = cart.find((item) => item.product_id === product.product_id);
   if (isExist) {
-    return alert("already added");
+    return toast.error("already added to cart list");
   } else {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
-    return alert("successfully added");
+    return toast.success("successfully added to cart list");
   }
 };
 
@@ -28,7 +30,7 @@ const deleteCartFromLocalStorage = (id) => {
   const remainingCart = cart.filter((item) => item.product_id !== id);
   if (remainingCart) {
     localStorage.setItem("cart", JSON.stringify(remainingCart));
-    alert("deleted cart");
+    return toast.warning("deleted from cart list");
   }
 };
 

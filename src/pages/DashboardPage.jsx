@@ -7,19 +7,34 @@ import {
   getCartFromLocalStorage,
 } from "../utilities/lsCart";
 import Card from "../components/Card";
+import {
+  deleteWishListFromLocalStorage,
+  getWishListFromLocalStorage,
+} from "../utilities/lsWishList";
 
 const DashboardPage = () => {
   const [cartList, setCartList] = useState([]);
-  // const [wishList, setWishList] = useState([]);
+  const [wishList, setWishList] = useState([]);
+
   useEffect(() => {
     const localStorageCart = getCartFromLocalStorage();
     setCartList(localStorageCart);
+
+    const localStorageWishList = getWishListFromLocalStorage();
+    setWishList(localStorageWishList);
   }, []);
   // console.log(cartList);
+  // console.log(wishList);
   const handleRemoveFromCart = (id) => {
     deleteCartFromLocalStorage(id);
     const localStorageCart = getCartFromLocalStorage();
     setCartList(localStorageCart);
+  };
+
+  const handleRemoveFromWishList = (id) => {
+    deleteWishListFromLocalStorage(id);
+    const localStorageWishList = getWishListFromLocalStorage();
+    setWishList(localStorageWishList);
   };
   return (
     <div>
@@ -51,7 +66,7 @@ const DashboardPage = () => {
             </div>
           </div>
 
-          <div className="grid gap-6 grid-cols-1">
+          <div className="grid gap-6 grid-cols-1 w-1/2 mx-auto mt-6">
             {cartList.map((cardItem) => (
               <Card
                 cardItem={cardItem}
@@ -63,8 +78,23 @@ const DashboardPage = () => {
           </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
-          {}
+          <div className="flex justify-between items-center mt-16">
+            <h1 className="text-2xl font-bold">Wishlist</h1>
+            <button className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full">
+              <span>Sort By Price</span>
+              <FaSortAmountDown></FaSortAmountDown>
+            </button>
+          </div>
+          <div className="grid gap-6 grid-cols-1 w-1/2 mx-auto">
+            {wishList.map((cardItem) => (
+              <Card
+                cardItem={cardItem}
+                key={cardItem.product_id}
+                showDeleteIcon={true}
+                handleRemoveFromWishList={handleRemoveFromWishList}
+              ></Card>
+            ))}
+          </div>
         </TabPanel>
       </Tabs>
     </div>

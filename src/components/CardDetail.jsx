@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { setCartToLocalStorage } from "../utilities/lsCart";
+import { setWishListToLocalStorage } from "../utilities/lsWishList";
 
 const CardDetail = () => {
   const data = useLoaderData();
@@ -36,6 +37,10 @@ const CardDetail = () => {
 
   const handleAddToCartBtn = (product) => {
     setCartToLocalStorage(product);
+  };
+
+  const handleAddToWishListBtn = (product) => {
+    setWishListToLocalStorage(product);
   };
 
   return (
@@ -131,7 +136,10 @@ const CardDetail = () => {
                     <span className="text-lg font-bold">Add To Cart</span>
                     <AiOutlineShoppingCart size={30}></AiOutlineShoppingCart>
                   </button>
-                  <button className="p-3 rounded-full border-2 border-gray-300">
+                  <button
+                    onClick={() => handleAddToWishListBtn(product)}
+                    className="p-3 rounded-full border-2 border-gray-300"
+                  >
                     <FaRegHeart size={20}></FaRegHeart>
                   </button>
                 </div>
