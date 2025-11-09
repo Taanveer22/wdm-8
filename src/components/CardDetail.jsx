@@ -3,19 +3,32 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { setCartToLocalStorage } from "../utilities/lsCart";
-import { setWishListToLocalStorage } from "../utilities/lsWishList";
+import {
+  getWishListFromLocalStorage,
+  setWishListToLocalStorage,
+} from "../utilities/lsWishList";
 
 const CardDetail = () => {
+  const [product, setProduct] = useState(null);
+  const [isWishList, setIsWishList] = useState(false);
   const data = useLoaderData();
   // console.log(data);
   const { id } = useParams();
   // console.log(id);
-  const [product, setProduct] = useState(null);
   useEffect(() => {
     const foundProduct = data.find(
       (productItem) => productItem.product_id == id
     );
     setProduct(foundProduct);
+
+    // disbaled wish list btn functionality
+    const localStorageWishList = getWishListFromLocalStorage();
+    let isExist = localStorageWishList.find(
+      (productElement) => productElement.product_id == foundProduct.product_id
+    );
+    if (isExist) {
+      setIsWishList(true);
+    }
   }, [data, id]);
   // console.log(product);
   if (!product) {
@@ -41,8 +54,8 @@ const CardDetail = () => {
 
   const handleAddToWishListBtn = (product) => {
     setWishListToLocalStorage(product);
+    setIsWishList(true);
   };
-
 
   return (
     <>
@@ -138,8 +151,9 @@ const CardDetail = () => {
                     <AiOutlineShoppingCart size={30}></AiOutlineShoppingCart>
                   </button>
                   <button
+                    disabled={isWishList}
                     onClick={() => handleAddToWishListBtn(product)}
-                    className="p-3 rounded-full border-2 border-gray-300"
+                    className="p-3 bg-red-500 rounded-full border-2 border-gray-300 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     <FaRegHeart size={20}></FaRegHeart>
                   </button>
