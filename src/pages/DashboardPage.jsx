@@ -96,7 +96,7 @@ const DashboardPage = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center mt-16">
             <h1 className="text-2xl font-bold">Cart</h1>
             <div className="flex flex-col lg:flex-row gap-3 items-center">
-              <h1 className="text-2xl font-bold">Total Cost : {cost}</h1>
+              <h1 className="text-2xl font-bold">Total Cost : {cost} $</h1>
               <button
                 onClick={() => handleCartListSorting("price")}
                 className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full"

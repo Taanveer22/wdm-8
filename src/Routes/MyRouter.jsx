@@ -6,6 +6,7 @@ import StatisticsPage from "../pages/StatisticsPage";
 import DashboardPage from "../pages/DashboardPage";
 import AllCards from "../components/AllCards";
 import CardDetail from "../components/CardDetail";
+import FaqPage from "../pages/FaqPage";
 
 const MyRouter = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const MyRouter = createBrowserRouter([
       {
         path: "/dashboardpage",
         element: <DashboardPage></DashboardPage>,
+      },
+      {
+        path: "/faqpage",
+        element: <FaqPage></FaqPage>,
       },
     ],
   },

@@ -58,6 +58,16 @@ const Navbar = () => {
                   Dashboard
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/faqpage"
+                  className={({ isActive }) =>
+                    isActive ? "text-violet-700" : "text-gray-700"
+                  }
+                >
+                  Faq
+                </NavLink>
+              </li>
             </ul>
           </div>
           <h1 className="text-xl font-bold">Gadget Heaven</h1>
@@ -92,6 +102,16 @@ const Navbar = () => {
                 }
               >
                 Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/faqpage"
+                className={({ isActive }) =>
+                  isActive ? "text-violet-700" : "text-gray-700"
+                }
+              >
+                Faq
               </NavLink>
             </li>
           </ul>

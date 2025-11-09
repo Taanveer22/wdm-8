@@ -1,7 +1,7 @@
 [
   {
     "product_id": "P001",
-    "product_title": "Apple iPhone 15 Pro Max",
+    "product_title": "iPhone 15 Pro Max",
     "product_image": "https://i.postimg.cc/jSqmyV34/iphone15.jpg",
     "category": "Phones",
     "price": 1299,
@@ -18,7 +18,7 @@
   },
   {
     "product_id": "P002",
-    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_title": "Galaxy S24 Ultra",
     "product_image": "https://i.postimg.cc/t4yyfmrw/samsungs24.jpg",
     "category": "Phones",
     "price": 1199,
@@ -35,7 +35,7 @@
   },
   {
     "product_id": "P003",
-    "product_title": "Google Pixel 8 Pro",
+    "product_title": "Pixel 8 Pro",
     "product_image": "https://i.postimg.cc/kgMzWrYK/pixel8.jpg",
     "category": "Phones",
     "price": 999,
@@ -155,7 +155,7 @@
   },
   {
     "product_id": "P014",
-    "product_title": "Lenovo ThinkPad X1 Carbon Gen 11",
+    "product_title": "Lenovo ThinkPad X1",
     "product_image": "https://i.postimg.cc/CLqWwHBY/lenovo.jpg",
     "category": "Laptops",
     "price": 1799,
@@ -172,7 +172,7 @@
   },
   {
     "product_id": "P015",
-    "product_title": "ASUS ROG Zephyrus G14",
+    "product_title": "ASUS Zephyrus G14",
     "product_image": "https://i.postimg.cc/5NCZfqYN/asus.jpg",
     "category": "Laptops",
     "price": 1599,
@@ -189,7 +189,7 @@
   },
   {
     "product_id": "P016",
-    "product_title": "Acer Swift X 16",
+    "product_title": "Acer Swift X16",
     "product_image": "https://i.postimg.cc/FsL2hgdN/acer.jpg",
     "category": "Laptops",
     "price": 1199,
