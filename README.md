@@ -1,10 +1,10 @@
 # GADGET HEAVEN E-COMMERCE
 
-A modern, responsive single-page CV application built with React, featuring a clean design and interactive elements.
+GadgetHeaven is a modern e-commerce platform for electronic gadgets built with React.js. The platform enables customers to browse, view details, and purchase various tech products through an intuitive online interface.
 
 ## 🚀 Live Demo
 
-[**View Live Website**](https://taanveer22.github.io/wdm-8/)
+[**View Live Website**](https://gadget-heaven-23.netlify.app/)
 
 ## 📋 Project Requirements
 
