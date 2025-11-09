@@ -1,6 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FaSortAmountDown } from "react-icons/fa";
+import { ImSortAmountAsc } from "react-icons/im";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import {
@@ -15,7 +16,6 @@ import {
 const DashboardPage = () => {
   const [cartList, setCartList] = useState([]);
   const [wishList, setWishList] = useState([]);
-  // const [sortCartList, setSortCartList] = useState([]);
 
   useEffect(() => {
     const localStorageCart = getCartFromLocalStorage();
@@ -47,6 +47,17 @@ const DashboardPage = () => {
       setCartList(sortedCartList);
     }
   };
+
+  const handleWishListSorting = (type) => {
+    console.log(type);
+    if (type === "rating") {
+      const sortedWishList = [...wishList].sort(
+        (x, y) => Number(x.rating) - Number(y.rating)
+      );
+      setWishList(sortedWishList);
+    }
+  };
+
   return (
     <div>
       <div className="text-center bg-purple-500 py-8 text-white">
@@ -94,9 +105,12 @@ const DashboardPage = () => {
         <TabPanel>
           <div className="flex justify-between items-center mt-16">
             <h1 className="text-2xl font-bold">Wishlist</h1>
-            <button className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full">
+            <button
+              onClick={() => handleWishListSorting("rating")}
+              className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-full"
+            >
               <span>Sort By Rating</span>
-              <FaSortAmountDown></FaSortAmountDown>
+              <ImSortAmountAsc></ImSortAmountAsc>
             </button>
           </div>
           <div className="grid gap-6 grid-cols-1 w-1/2 mx-auto">

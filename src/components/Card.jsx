@@ -7,7 +7,7 @@ const Card = ({
   handleRemoveFromCart,
   handleRemoveFromWishList,
 }) => {
-  const { price, product_image, product_title, product_id } = cardItem;
+  const { product_id, rating, price, product_image, product_title } = cardItem;
   return (
     <div className="card bg-base-100 shadow-sm relative">
       <figure className="px-5 pt-5 ">
@@ -16,6 +16,7 @@ const Card = ({
       <div className="card-body items-start text-center">
         <h2 className="card-title">{product_title}</h2>
         <p>Price : {price} $</p>
+        <p>Rating : {rating} *</p>
         <div className="card-actions">
           <Link to={`/cardDetail/${product_id}`}>
             <button className="btn btn-outline text-violet-700 rounded-full border-2 border-violet-700">
